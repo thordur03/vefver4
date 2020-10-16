@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{%block title %}Vörulistinn 2020{%endblock%}
+{%block content %}
+<p class="karfa"><a href="/karfa"><img src="static/karfa.jpg" ></a>Smelltu á körfuna</p>
+    <div class="wrapper">
+        {% for i in v%}
+            <div class="vara">
+                <h2>{{i[1]}}</h2>
+                <img src="/static/{{i[2]}}">
+                <h2>Verð: {{i[3]}}</h2>
+                <a href="/add/{{i[0]}}" class="butt">Panta</a>
+            </div>
+        {% endfor %}
+    </div>
+{%endblock%}
